@@ -51,8 +51,7 @@ else # run specific serial test
         echo "$ $LATE_BLOCKS"
         eval $LATE_BLOCKS
     else
-        echo "+++ $([[ "$BUILDKITE" == 'true' ]] && echo ':no_entry: ')ERROR: No tests matching \"$TEST\" registered with ctest! Exiting..."
-        EXIT_STATUS='1'
+        echo "+++ $([[ "$BUILDKITE" == 'true' ]] && echo ':no_entry: ')WARNING: No tests matching \"$TEST\" registered with ctest! Exiting..."
     fi
 fi
 exit $EXIT_STATUS
